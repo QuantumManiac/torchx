@@ -110,6 +110,11 @@ autodoc_mock_imports = [
     "sagemaker",
     "kubernetes",
 ]
+if not FBCODE:
+    autodoc_mock_imports += [
+        "torchx.workspace.fb",
+        "torchx.specs.fb",
+    ]
 
 # The master toctree document.
 master_doc = "index"
